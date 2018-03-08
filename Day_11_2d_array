@@ -14,7 +14,7 @@ public class Solution {
                 arr[i][j] = in.nextInt();
             }
         }
-        int maxSum = Integer.MIN_VALUE; // know inputs from -9 to 9, so necessary to calc negatives properly
+        int maxSum = Integer.MIN_VALUE; // bc max(sum) can still be negative, setting to lowest possible value
         int hourglassSum = 0;
 
         for (int i=0; i <= (arr[0].length - 3); i++) {
