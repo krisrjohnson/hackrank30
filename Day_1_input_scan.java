@@ -12,9 +12,7 @@ public class Solution {
 		String t;
 
 		j = scan.nextInt();
-		scan.nextLine();
-
-		e = scan.nextDouble();
+		e = scan.nextDouble(); // automatically jumps to next line
 		scan.nextLine(); // moves scan to beginning of next line
 
 		t = scan.nextLine(); // pulls whole line of text
