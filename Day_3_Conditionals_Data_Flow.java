@@ -8,22 +8,13 @@ public class Solution {
    
    public static void main(String[] args) {
       Scanner scan = new Scanner(System.in);
-      int n = scan.nextInt(); 
+      int N = scan.nextInt(); 
       scan.close();
-      String ans="";
           
       // if 'n' is NOT evenly divisible by 2 (i.e.: n is odd)
-      if(n%2==1){
-         ans = "Weird";
-      }
-      else if (n < 5 && n >= 2) {
-          ans = "Not Weird";
-      } else if (n <= 20 && n >= 6) {
-          ans = "Weird";
-      } else if (n > 20) {
-          ans = "Not Weird";
-      }
-      System.out.println(ans);
+      if (N % 2 == 1) {System.out.println("Weird");}
+        else if ((N > 1 && N < 6) || (N > 20)) {System.out.println("Not Weird");}
+        else if (N > 5 && N < 21) {System.out.println("Weird");}
 
 /*   If  is odd, print Weird
 If  is even and in the inclusive range of  to , print Not Weird
