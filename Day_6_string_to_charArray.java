@@ -8,24 +8,22 @@ public class Solution {
 
     public static void main(String[] args) {
         /* Enter your code here. Read input from STDIN. Print output to STDOUT. Your class should be named Solution. */
-        Scanner scan = new Scanner(System.in);
+        Scanner in = new Scanner(System.in);
         
-        int z = scan.nextInt();
-        scan.nextLine();
+        int z = in.nextInt();
+        in.nextLine();
         
-        for (int i = 1; i <= z; i++) {
-          String abc = scan.nextLine();
-            //System.out.println(abc);
+        for (int i = 1; i <= n; i++) {
+            String abc = in.nextLine();
+            String oddString = "";
+            String eveString = "";
             char[] myCharArray = abc.toCharArray();
-
+            
             for (int j = 0; j < abc.length(); j++) {
-                 if (j % 2 == 0) {System.out.print(myCharArray[j]);}
+                if (j % 2 == 0) {eveString += Character.toString(myCharArray[j]);}
+                else {oddString += Character.toString(myCharArray[j]);}
             }
-            System.out.print(" ");
-            for (int j = 0; j < abc.length(); j++) {
-                if (j % 2 == 1) {System.out.print(myCharArray[j]);}
-            }
-            System.out.println();
+            System.out.println(eveString + " " + oddString);
         }
     }
 }
